@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Wifi, FileText, Mail } from 'lucide-react';
+import { FileText, Mail } from 'lucide-react';
 import { GitHubIcon } from '../shared/SocialIcons';
+import Logo from '../shared/Logo';
 
 const FOOTER_LINKS = {
   Product: [
@@ -28,13 +29,8 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-7 h-7 rounded-md bg-accent flex items-center justify-center">
-                <Wifi className="w-3.5 h-3.5 text-white" strokeWidth={2.5} />
-              </div>
-              <span className="text-base font-semibold tracking-tight text-primary dark:text-white">
-                WiFi Vision
-              </span>
+            <Link to="/" className="inline-block mb-4">
+              <Logo size="sm" />
             </Link>
             <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs">
               AI-powered, privacy-preserving indoor human sensing using Wi-Fi CSI and Machine Learning.

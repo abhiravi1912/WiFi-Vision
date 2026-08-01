@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Wifi, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
+import Logo from '../shared/Logo';
 
 const NAV_LINKS = [
   { label: 'Technology', path: '/technology' },
@@ -38,13 +39,8 @@ export default function Navbar() {
     >
       <nav className="container-default flex items-center justify-between h-16" aria-label="Main navigation">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group" aria-label="WiFi Vision home">
-          <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-            <Wifi className="w-4 h-4 text-white" strokeWidth={2.5} />
-          </div>
-          <span className="text-lg font-semibold tracking-tight text-primary dark:text-white">
-            WiFi Vision
-          </span>
+        <Link to="/" className="group" aria-label="WiFi Vision home">
+          <Logo size="md" />
         </Link>
 
         {/* Desktop links */}
