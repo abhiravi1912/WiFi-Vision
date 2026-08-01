@@ -148,6 +148,5 @@ WiFi Vision supports three classifiers:
 
 Features extracted per CSI window: mean, std, variance, skewness, kurtosis, median, IQR, range, spectral energy — computed across 64 subcarriers.
 
-## License
 
-This project is developed at VIT-AP University for academic and research purposes.
+
