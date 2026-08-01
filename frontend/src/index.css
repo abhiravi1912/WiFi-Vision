@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-primary font-sans;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  .dark body,
+  body.dark-body {
+    @apply bg-slate-950 text-slate-100;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-accent;
+  }
+}
+
+@layer components {
+  .container-default {
+    @apply max-w-7xl mx-auto px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-20 md:py-28;
+  }
+
+  .card {
+    @apply bg-white border border-surface-border rounded-lg p-6 transition-colors duration-200;
+  }
+
+  .dark .card {
+    @apply bg-slate-900 border-slate-800;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-accent text-white px-5 py-2.5 rounded-lg font-medium text-sm
+           hover:bg-accent-hover transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-accent/40 focus:ring-offset-2;
+  }
+
+  .dark .btn-primary {
+    @apply focus:ring-offset-slate-950;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border border-surface-border text-primary px-5 py-2.5 rounded-lg font-medium text-sm
+           hover:bg-slate-50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-accent/40 focus:ring-offset-2;
+  }
+
+  .dark .btn-secondary {
+    @apply border-slate-700 text-slate-200 hover:bg-slate-800 focus:ring-offset-slate-950;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-widest uppercase text-accent mb-3;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-primary;
+  }
+
+  .dark .section-title {
+    @apply text-white;
+  }
+
+  .section-description {
+    @apply text-base md:text-lg text-slate-500 max-w-2xl leading-relaxed;
+  }
+
+  .dark .section-description {
+    @apply text-slate-400;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-slate-700;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-600;
+}
